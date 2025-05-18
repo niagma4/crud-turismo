@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import './App.css';
+import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Inicio from './components/inicio';
@@ -34,7 +34,7 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/inicio">
+                  <Link className="nav-link" to="/">
                     Inicio
                   </Link>
                 </li>
@@ -52,10 +52,10 @@ function App() {
             </div>
           </div>
         </nav>
-
+        
         <main className="flex-grow-1">
           <Routes>
-            <Route path="/inicio" element={<Inicio />} />
+            <Route path="/" element={<Inicio />} />
             <Route path="/sobre-el-parque" element={<SobreParque />} />
             <Route path="/reservas" element={<Reservas />} />
             <Route path="/actividades" element={<Actividades />} />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './estilos.css';
+import '../styles/estilos.css';
 
 const ListaReservas = () => {
   const tabla = 'reservas';

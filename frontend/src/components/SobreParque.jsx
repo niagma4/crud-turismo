@@ -1,6 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap
-// import './StyleCarnaval.css'; // Importa el nuevo archivo CSS
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 function SobreParque() {
     return (

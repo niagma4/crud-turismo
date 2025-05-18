@@ -1,0 +1,22 @@
+.text-shadow {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero {
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.3)),
+    url('/turismo/frontend/src/assets/parque-nacional-tayrona.jpg');
+  background-size: cover;
+  background-position: center;
+    height: 100vh;
+}
+
+.hero-texto {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: black;
+}
+
