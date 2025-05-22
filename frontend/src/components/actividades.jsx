@@ -3,7 +3,6 @@ import axios from 'axios';
 import '../styles/estilos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 const ListaActividades = () => {
   const tabla = 'actividades';
   const [actividades, setActividades] = useState([]);
@@ -40,17 +39,21 @@ const ListaActividades = () => {
   };
 
   const actualizarActividad = async (e) => {
-    e.preventDefault();
-    try {
-      const id = editandoActividad.id;
-      const res = await axios.put(`${API_URL}/${id}`, formData);
-      setActividades(actividades.map((e) => (e.id === id ? res.data : e)));
-      setEditandoActividad(null);
-      setFormData({ nombre: '', descripcion: '', fecha: ''});
-    } catch (err) {
-      console.error('Error al actualizar actividad:', err);
-    }
-  };
+  e.preventDefault();
+  try {
+    const id = editandoActividad.id;
+    await axios.put(`${API_URL}/${id}`, formData);
+    
+    // Recarga toda la lista después de actualizar
+    const res = await axios.get(API_URL);
+    setActividades(res.data);
+
+    setEditandoActividad(null);
+    setFormData({ nombre: '', descripcion: '', fecha: ''});
+  } catch (err) {
+    console.error('Error al actualizar actividad:', err);
+  }
+};
 
   const eliminarActividad = async (id) => {
     try {
