@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Reservas() {
@@ -27,7 +28,7 @@ function Reservas() {
                             </ul>
                         </div>
                         <div className="card-footer bg-transparent border-0 p-4">
-                            <a href="/actividades" className="btn btn-primary btn-lg w-100">Reservar Actividades</a>
+                            <Link to="/actividades" className="btn btn-primary btn-lg w-100">Reservar Actividades</Link>
                         </div>
                     </div>
                 </div>
@@ -54,7 +55,7 @@ function Reservas() {
                             </ul>
                         </div>
                         <div className="card-footer bg-transparent border-0 p-4">
-                            <a href="/alojamientos" className="btn btn-success btn-lg w-100">Reservar Alojamiento</a>
+                            <Link to="/listaReservas" className="btn btn-success btn-lg w-100">Reservar Alojamiento</Link>
                         </div>
                     </div>
                 </div>
